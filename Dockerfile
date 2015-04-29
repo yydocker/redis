@@ -3,6 +3,7 @@ MAINTAINER Colin <1209755822@qq.com>
 # install redis
 VOLUME ["/usr/local/redis/logs","/usr/local/redis/var"]
 ADD install.sh /install
+RUN chmod a+x /install
 RUN /install
 WORKDIR /usr/local/redis/conf/
 ADD redis.conf /etc/redis.conf
